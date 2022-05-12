@@ -1,0 +1,52 @@
+* {
+  all: unset;
+
+  display: revert;
+
+  cursor: revert;
+
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/********** BOKS TIL HVOR VIDEO SKAL VÆRE************/
+.video {
+  border: 2px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 20rem;
+}
+
+/************************* MENU *******************/
+header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  position: relative;
+  justify-content: right;
+}
+
+.hjemknap {
+  justify-content: left;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  list-style: none;
+  gap: 30px;
+  margin: 35px;
+  padding-right: 50px;
+}
+
+header ul li {
+  padding: 10px;
+}
+
+li a:hover {
+  color: rgb(205, 4, 4);
+}
