@@ -7,10 +7,21 @@
     <title>Pilotsite</title>
     <link rel="stylesheet" href="hjemmeside.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
       <a href="index.html"> <img src="favicon.svg" alt="ikon" id="ikon" /></a>
+
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="wireframe.html">Wireframe</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -23,7 +34,13 @@
 
       <figure>
         <div class="om">
-          <img src="Chris m. citat.jpg" alt="billede" />
+          <img src="chris_img/forsidebillede.JPG" alt="billede" />
+          <div class="citat">
+            <p>Jeg prøver at danse hver dag</p>
+            <p>i en time, nogle gange 6</p>
+            <p>Dans er et spørgsmål om tillid.</p>
+            <p>-Christine Fuglbjerg</p>
+          </div>
         </div>
       </figure>
 
@@ -31,20 +48,35 @@
         <h3>VIDEO OM DANS SOM PASSION</h3>
         <div class="flex-col">
           <div class="video">
-            <p>Video</p>
+            <video controls src="Pilotvideo.mp4"></video>
           </div>
         </div>
       </figure>
-      <figcaption>Video af Sofia Simone Rokkedal</figcaption>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vuR1cikWEYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <figcaption>Denne video præsentere Christine Fuglbjerg. Videoen handler om hendes dans og en kort fortælling om hvorfor dans er hendes passion.</figcaption>
 
-      <h3>Galleri</h3>
-      <figure class="flex">
-        <img src="chris_img/strækker_ud.JPG" alt="billede" />
-        <img src="chris_img/Chrid_ude.JPG" alt="billede" />
-        <img src="img_galleri/Chris_hoejformat.jpg" alt="billede" />
-        <img src="img_galleri/chris_bredformat.jpg" alt="billede" />
-        <img src="img_galleri/Chris_closeupjpg.jpg" alt="billede" />
-      </figure>
+      <h3>GALLERI</h3>
+      <div class="container">
+        <div class="col">
+          <img src="chris_img/strækker_ud.webp" alt="billede" />
+        </div>
+
+        <div class="col">
+          <img src="chris_img/Chrid_ude.webp" alt="billede" />
+        </div>
+
+        <div class="col_flex">
+          <img src="img_galleri/Chris_hoejformat.webp" alt="billede" />
+        </div>
+
+        <div class="col">
+          <img src="img_galleri/chris_bredformat.webp" alt="billede" />
+        </div>
+
+        <div class="col">
+          <img src="img_galleri/Chris_closeupjpg.webp" alt="billede" />
+        </div>
+      </div>
     </main>
     <footer>
       <p class="footerp">© Sofia Simone Rokkedal</p>

@@ -12,17 +12,17 @@ img {
   width: 100%;
   height: auto;
   display: block;
+  padding-bottom: 15px;
 }
 
 /***************IKON ***********/
 #ikon {
-  max-width: 100px;
+  max-width: 80px;
   position: absolute;
-  top: 6%;
+  top: 1%;
   left: 1%;
   gap: 10px;
-  padding: 20px;
-  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 header {
@@ -33,7 +33,16 @@ header {
 
 /********** BOKS TIL HVOR VIDEO SKAL VÆRE************/
 .video {
-  border: 2px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+iframe {
+  padding: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -56,14 +65,23 @@ header {
   justify-content: left;
 }
 
-/* ul {
+ul {
   display: flex;
   flex-direction: row;
   font-size: 15px;
+  color: white;
   list-style: none;
-  gap: 30px;
-  margin: 35px;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  margin: 3px;
   padding-right: 50px;
+}
+
+a:link {
+  text-decoration: none;
+}
+a {
+  color: rgba(200, 132, 73, 0.781);
 }
 
 header ul li {
@@ -71,8 +89,30 @@ header ul li {
 }
 
 li a:hover {
-  color: rgb(205, 4, 4);
-} */
+  color: rgb(0, 0, 0);
+}
+
+/************* CITAT OVENPÅ BILLEDE ******************/
+
+.om {
+  display: grid;
+  place-items: start;
+}
+
+img,
+.citat {
+  display: grid;
+  grid-area: 1/1;
+  margin: 10px;
+}
+
+.citat {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 15px;
+}
 
 /***************TEKST OVERSKRIFT ******************/
 
@@ -86,12 +126,13 @@ h1 {
 }
 
 h2 {
+  all: unset;
   font-family: sans-serif;
   font-size: 15px;
   display: flex;
   justify-content: center;
-  margin: 10px;
-  padding-bottom: 5%;
+  margin: 5px;
+  padding-bottom: 10px;
 }
 
 h3 {
@@ -101,7 +142,16 @@ h3 {
   justify-content: center;
   margin: 5px;
   padding-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+}
+
+.logline {
+  padding: 2px;
+  font-family: "Rubik", sans-serif;
 }
 
 figcaption {
@@ -110,17 +160,37 @@ figcaption {
   font-size: smaller;
   font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: italic;
+  font-size: 15px;
 }
 
-.flex {
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 10px;
+  gap: 5px;
   padding-bottom: 100px;
 }
 
-/* Ændring for galleri */
-@media (min-width: 800px) {
+.col_flex {
+  width: 70%;
+}
+
+.col_1 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+/* Ændring for tablet/mobil */
+@media (max-width: 800px) {
+  flex {
+    display: grid;
+  }
+  .citat {
+    font-size: 20px;
+  }
+}
+
+/* Ændring for desktop */
+@media (min-width: 1000px) {
   flex {
     display: grid;
   }
