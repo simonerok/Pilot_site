@@ -12,7 +12,7 @@ img {
   width: 100%;
   height: auto;
   display: block;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 /***************IKON ***********/
@@ -26,13 +26,14 @@ img {
 }
 
 header {
-  padding: 50px;
+  padding: 30px;
   margin-bottom: 10px;
   background-color: antiquewhite;
 }
 
 /********** BOKS TIL HVOR VIDEO SKAL VÆRE************/
-.video {
+video {
+  padding: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -46,7 +47,7 @@ iframe {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 80%;
   height: auto;
   aspect-ratio: 16/9;
 }
@@ -114,7 +115,7 @@ img,
   margin: 15px;
 }
 
-/***************TEKST OVERSKRIFT ******************/
+/*************** TEKSTER + OVERSKRIFTER ******************/
 
 h1 {
   font-family: sans-serif;
@@ -163,21 +164,36 @@ figcaption {
   font-size: 15px;
 }
 
-.container {
+/***************** GRID *******************/
+
+/* .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5px;
-  padding-bottom: 100px;
+} */
+
+.container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.child-1,
+.child-2,
+.child-3,
+.child-4 {
+  grid-column: span 3;
+  padding: 0%;
+  margin: 0%;
 }
 
 .col_flex {
-  width: 70%;
+  grid-column: 3;
+  grid-row: span 2;
+  width: 80%;
 }
 
-.col_1 {
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
+/***************************** MEDIA QUARRIES **********************/
 
 /* Ændring for tablet/mobil */
 @media (max-width: 800px) {
